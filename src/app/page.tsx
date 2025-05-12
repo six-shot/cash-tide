@@ -136,7 +136,7 @@ export default function Home() {
             />
           </motion.div>
           <motion.div
-            className="absolute bottom-[150px] left-[60px] hu"
+            className="absolute bottom-[120px] left-[60px] hu"
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -312,7 +312,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex-1 pl-[100px]">
-            <video className="rounded-[20px] w-full" autoPlay>
+            <video className="rounded-[20px] w-full" autoPlay loop>
               <source src="/video/video1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -320,7 +320,7 @@ export default function Home() {
         </div>
         <div className="max-w-[1440px] mx-auto py-[96px] px-[100px] flex items-center pt-[100px]">
           <div className="flex-1 mr-[100px]">
-            <video className="rounded-[20px] w-full" autoPlay>
+            <video className="rounded-[20px] w-full" autoPlay loop>
               <source src="/video/video2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
