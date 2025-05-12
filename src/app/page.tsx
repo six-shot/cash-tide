@@ -93,7 +93,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="pt-[92px] relative h-[902px]  overflow-hidden ">
+      <div className="pt-[92px] relative h-[702px]  overflow-hidden ">
         <Image
           src={left}
           alt="left"
