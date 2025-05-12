@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/globals/navbar";
 import localFont from "next/font/local";
+import Footer from "@/components/globals/footer";
 
 const suisee = localFont({
   src: "../../public/fonts/Suisee.ttf",
@@ -44,6 +45,7 @@ export default function RootLayout({
         className={` ${inter.variable} ${suisee.variable} ${lausanne.variable} ${TWKLausanne700.variable} ${TWKLausanne500.variable} antialiased`}
       ><Navbar/>
         {children}
+        <Footer />
       </body>
     </html>
   );
