@@ -14,6 +14,10 @@ body {
 .faq{
   background: linear-gradient(124deg, #D1EEFF 0%, #FFF 55%);
 }
+.nav-bg{
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.4) 0%, var(--token-d49ce14e-f5dc-463a-9b8d-4f0e772df7f1, rgb(255, 255, 255)) 100%);
+  backdrop-filter: blur(5px);
+}
 .card-bg {
   background: radial-gradient(
     50% 50% at 50% 50%,
