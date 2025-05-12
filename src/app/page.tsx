@@ -52,9 +52,6 @@ const benefitsData = [
   },
 ];
 
-
-
-
 const marqueeFeatures = [
   "Smart Payment Requests",
   "Instant Global Transfers",
@@ -64,11 +61,8 @@ const marqueeFeatures = [
 ];
 
 export default function Home() {
-
-
-
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
-  const [clickedCard, setClickedCard] = useState<number | null>(0);
+ 
   const data = [
     {
       title: "What is Whisper?",
@@ -96,9 +90,6 @@ export default function Home() {
         "Whisper's AI gives you live gas estimates, token trends, wallet stats, and answers to basic blockchain questions — all within the chat experience.",
     },
   ];
-
-
-
 
   return (
     <div>
@@ -388,14 +379,14 @@ export default function Home() {
             <div className="flex gap-2 items-center">
               <Image src={benefits} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
-                FAQ'S
+                FAQ&apos;S
               </h5>
             </div>
             <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
               Got a quick question?
             </h5>
             <p className="font-[family-name:var(--font-inter)] text-[#13181f]  text-center">
-              We're here to help you make the right decision. Explore our
+              We&apos;re here to help you make the right decision. Explore our
               frequently asked <br /> questions and find answers below.
             </p>
           </div>
@@ -415,19 +406,23 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="why py-20">
+        <div className="flex gap-4 flex-col justify-center items-center">
+          <h2 className="text-[#061833] text-[44px] tracking-[-0.01em] font-medium font-[family-name:var(--font-TWKLausanne500)] text-center leading-[79px] mt-[23px]">
+            🚀 Ready to Send Money Like a Text?
+          </h2>
+          <p className=" w-[640px] text-[#475467] leading-[23px] text-center font-[family-name:var(--font-inter)]">
+            Join thousands who are already sending and receiving money globally
+            in <br /> seconds—free, fast, and secure.
+          </p>
+          <button className=" cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
+            Get Started
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
 
 const Accordion = ({
   title,
