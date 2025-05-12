@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import dollar from "../../public/svgs/dollar.svg";
 import speed from "../../public/svgs/speed.svg";
 import star from "../../public/svgs/star.svg";
+import Marquee from "react-fast-marquee";
 
 const benefitsData = [
   {
@@ -47,6 +48,14 @@ const benefitsData = [
       "Enjoy completely free transfers with no hidden charges or transaction fees.",
     icons: [dollar, speed],
   },
+];
+
+const marqueeFeatures = [
+  "Smart Payment Requests",
+  "Instant Global Transfers",
+  "No Hidden Fees",
+  "Send to Any Phone Number",
+  "Blockchain Security",
 ];
 
 export default function Home() {
@@ -213,6 +222,38 @@ export default function Home() {
                 </h5>
               </div>
             </div>
+          </div>
+          <div className="p-2.5">
+            <Marquee className="" direction="left" speed={40}>
+              <div className="flex gap-8">
+                {marqueeFeatures.map((feature, idx) => (
+                  <div
+                    key={idx}
+                    className="px-6 h-[60px] rounded-full bg-[#F7F8F5] flex items-center"
+                  >
+                    <h5 className="text-[#13181F] font-[family-name:var(--font-inter)]">
+                      {feature}
+                    </h5>
+                  </div>
+                ))}
+              </div>
+            </Marquee>
+          </div>
+          <div className="p-2.5">
+            <Marquee className="" direction="right" speed={40}>
+              <div className="flex gap-8">
+                {marqueeFeatures.map((feature, idx) => (
+                  <div
+                    key={idx}
+                    className="px-6 h-[60px] rounded-full bg-[#F7F8F5] flex items-center"
+                  >
+                    <h5 className="text-[#13181F] font-[family-name:var(--font-inter)]">
+                      {feature}
+                    </h5>
+                  </div>
+                ))}
+              </div>
+            </Marquee>
           </div>
         </div>
       </div>
