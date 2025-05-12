@@ -1,103 +1,221 @@
+"use client";
 import Image from "next/image";
+import left from "../../public/svgs/left.svg";
+import right from "../../public/svgs/right.svg";
+import widget1 from "../../public/svgs/widget1.svg";
+import widget from "../../public/svgs/widget.svg";
+import benefits from "../../public/svgs/benefits.svg";
+import { motion } from "framer-motion";
+import dollar from "../../public/svgs/dollar.svg";
+import speed from "../../public/svgs/speed.svg";
+import star from "../../public/svgs/star.svg";
+
+const benefitsData = [
+  {
+    title: "Global Access",
+    description:
+      "Use your phone number anywhere in the world. One wallet, global access - No borders & No banking apps.",
+    icons: [dollar, speed],
+  },
+  {
+    title: "Instant Transactions",
+    description:
+      "Your money moves at the speed of a text message. Send funds globally and have them arrive within seconds, not days.",
+    icons: [dollar, speed],
+  },
+  {
+    title: "Blockchain-Powered",
+    description:
+      "Your transactions are secured on the blockchain - fast, transparent, and tamper-proof from end to end.",
+    icons: [dollar, speed],
+  },
+  {
+    title: "Global Access",
+    description:
+      "Use your phone number anywhere in the world. One wallet, global access - No borders & No banking apps.",
+    icons: [dollar, speed],
+  },
+  {
+    title: "Instant Transfers",
+    description:
+      "Send and receive money instantly across borders with just a phone number.",
+    icons: [dollar, speed],
+  },
+  {
+    title: "Zero Fees",
+    description:
+      "Enjoy completely free transfers with no hidden charges or transaction fees.",
+    icons: [dollar, speed],
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div>
+      <div className="pt-[92px] relative h-[902px]  overflow-hidden ">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src={left}
+          alt="left"
+          className="absolute top-0 left-0 opacity-10"
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <Image
+          src={right}
+          alt="left"
+          className="absolute -bottom-[50px] right-0 opacity-10"
+        />
+        <div className="max-w-[1440px] mx-auto  h-[702px] relative">
+          <div className="pt-[68px] flex gap-6 flex-col justify-center items-center">
+            <div className="px-[35px] bg-[#D1EEFF] rounded-[18px] flex items-center">
+              <h6 className="text-[#13181F] h-[31px] flex items-center text-[13px] font-medium font-[family-name:var(--font-suisee)] mt-[3px]">
+                Powering Global Payments
+              </h6>
+            </div>
+            <div>
+              <h2 className="text-[#061833] text-[72px] tracking-[-0.01em] font-bold font-[family-name:var(--font-TWKLausanne500)] text-center leading-[79px] mt-[23px]">
+                Transfers as Simple as a <br /> Text Message.
+              </h2>
+              <p className="mt-[17px] w-[640px] text-[#475467] leading-[23px] text-center font-[family-name:var(--font-inter)]">
+                No App needed. Send and receive globally, instantly, and for
+                free. With just a phone number, your wallet is ready.
+              </p>
+            </div>
+            <button className="ml-2 cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
+              Enter Dapp
+            </button>
+          </div>
+          <motion.div
+            className="absolute bottom-[300px] right-[-34px] hu"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={widget}
+              alt="widget"
+              style={{ pointerEvents: "none" }}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </motion.div>
+          <motion.div
+            className="absolute bottom-[-12px] left-[-26px] hu"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            Read our docs
-          </a>
+            <Image
+              src={widget1}
+              alt="widget1"
+              style={{ pointerEvents: "none" }}
+            />
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <div className="why ">
+        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
+          <div className="flex flex-col gap-4">
+            <div className="flex gap-2 items-center">
+              <Image src={benefits} alt="benefits" />
+              <h5 className="text-[14px] text-[#13181f] font-medium">
+                BENEFITS
+              </h5>
+            </div>
+            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+              Why Choose Cashtide?
+            </h5>
+            <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
+              Global transfers, redefined - Instant, Borderless, and Effortless.
+              Just a phone <br /> number is all it takes.
+            </p>
+          </div>
+          <div className="mt-[44px] grid grid-cols-3 gap-8 ">
+            {benefitsData.map((benefit, index) => (
+              <div
+                key={index}
+                className="p-[36px] rounded-[14px] card-bg border border-[#EAECF1]"
+              >
+                <div className="flex justify-between items-center">
+                  <Image src={dollar} alt="dollar" />
+                  <div className="w-[36px] h-[36px] bg-[#F7F8F5] rounded-full flex items-center justify-center -mt-10 -mr-4">
+                    <Image src={speed} alt="speed" />
+                  </div>
+                </div>
+                <div className="mt-6 flex flex-col gap-4">
+                  <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
+                    {benefit.title}
+                  </h5>
+                  <h5 className="text-[#13181F] text-[14px] font-[family-name:var(--font-inter)]">
+                    {benefit.description}
+                  </h5>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="why ">
+        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
+          <div className="flex flex-col gap-4">
+            <div className="flex gap-2 items-center">
+              <Image src={benefits} alt="benefits" />
+              <h5 className="text-[14px] text-[#13181f] font-medium">
+                THE CASHTIDE ADVANTAGES
+              </h5>
+            </div>
+            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+              Get more with Cashtide
+            </h5>
+            <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
+              Leverage the power of AI to automatically optimize your purchases,
+              ensuring you <br /> get the best value for your business with
+              every transaction.
+            </p>
+          </div>
+          <div className="my-[44px] flex card-bg border border-[#EAECF1] p-[36px] rounded-[15px]">
+            <div className="pr-6">
+              <div className="w-[53px] h-[53px] bg-black flex justify-center items-center rounded-full">
+                <Image src={star} alt="star" />
+              </div>
+              <div className="mt-6">
+                <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
+                  Send and receive money at Zero Cost
+                </h5>
+                <h5 className="text-[#13181F] text-[14px] font-[family-name:var(--font-inter)]">
+                  Send and receive money globally with no fees or hidden
+                  charges. CashTide makes cross-border transfers fast and
+                  affordable.
+                </h5>
+              </div>
+            </div>
+            <div className="px-6 border-l border-[#EAF0DD]">
+              <div className="w-[53px] h-[53px] bg-black flex justify-center items-center rounded-full">
+                <Image src={star} alt="star" />
+              </div>
+              <div className="mt-6">
+                <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
+                  Send to Any Phone Number
+                </h5>
+                <h5 className="text-[#13181F] text-[14px] font-[family-name:var(--font-inter)]">
+                  Send money to any phone number, even without the app. Once the
+                  recipient installs CashTide, they can instantly access their
+                  funds.
+                </h5>
+              </div>
+            </div>
+            <div className="pl-6 border-l border-[#EAF0DD]">
+              <div className="w-[53px] h-[53px] bg-black flex justify-center items-center rounded-full">
+                <Image src={star} alt="star" />
+              </div>
+              <div className="mt-6">
+                <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
+                  Request and Approve Payments with Ease
+                </h5>
+                <h5 className="text-[#13181F] text-[14px] font-[family-name:var(--font-inter)]">
+                  Easily request payments and let the recipient approve or
+                  decline. CashTide streamlines payment management with a simple
+                  tap.
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

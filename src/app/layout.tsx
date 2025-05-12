@@ -1,15 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/globals/navbar";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const suisee = localFont({
+  src: "../../public/fonts/Suisee.ttf",
+  variable: "--font-suisee",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lausanne = localFont({
+  src: "../../public/fonts/Lausanne.ttf",
+  variable: "--font-lausanne",
+});
+const TWKLausanne700 = localFont({
+  src: "../../public/fonts/twk/TWKLausanne-700.woff",
+  variable: "--font-TWKLausanne700",
+});
+const TWKLausanne500 = localFont({
+  src: "../../public/fonts/twk/TWKLausanne-500.woff",
+  variable: "--font-TWKLausanne500",
+});
+
+
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +41,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={` ${inter.variable} ${suisee.variable} ${lausanne.variable} ${TWKLausanne700.variable} ${TWKLausanne500.variable} antialiased`}
+      ><Navbar/>
         {children}
       </body>
     </html>
