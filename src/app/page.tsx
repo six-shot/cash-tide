@@ -10,6 +10,7 @@ import dollar from "../../public/svgs/dollar.svg";
 import speed from "../../public/svgs/speed.svg";
 import star from "../../public/svgs/star.svg";
 import Marquee from "react-fast-marquee";
+import MarqueePage from "@/components/Marquee";
 
 const benefitsData = [
   {
@@ -137,7 +138,7 @@ export default function Home() {
             {benefitsData.map((benefit, index) => (
               <div
                 key={index}
-                className="p-[36px] rounded-[14px] card-bg border border-[#EAECF1]"
+                className="p-[36px] rounded-[14px] card-bg border border-[#EAF0DD]"
               >
                 <div className="flex justify-between items-center">
                   <Image src={dollar} alt="dollar" />
@@ -276,7 +277,7 @@ export default function Home() {
               banks.
             </p>
             <button className=" cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
-            Get Started
+              Get Started
             </button>
           </div>
           <div className="flex-1 pl-[100px]">
@@ -336,11 +337,8 @@ export default function Home() {
               Enter Dapp
             </button>
           </div>
-          <div className="flex-1 pl-[100px]">
-            {/* <video className="rounded-[20px] w-full" autoPlay>
-              <source src="/video/video1.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video> */}
+          <div className="flex-1 pl-[100px] h-[500px] overflow-hidden">
+            <MarqueePage />
           </div>
         </div>
       </div>

@@ -18,3 +18,45 @@ body {
     #fff 100%
   );
 }
+
+
+.gallery {
+  position: relative;
+  width: 100%;
+}
+
+@keyframes marqueeVertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marqueeTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marqueeBottom {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-vertical {
+  animation: marqueeVertical 10s linear infinite;
+}
+
+.animate-marquee-top {
+  animation: marqueeTop 10s linear infinite;
+}
+
