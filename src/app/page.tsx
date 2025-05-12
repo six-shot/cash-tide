@@ -136,7 +136,7 @@ export default function Home() {
             />
           </motion.div>
           <motion.div
-            className="absolute bottom-[-12px] left-[-26px] hu"
+            className="absolute bottom-[150px] left-[60px] hu"
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
