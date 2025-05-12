@@ -11,6 +11,9 @@ body {
 .why {
   background: linear-gradient(241deg, #d1f0ff 0%, #fff 55%);
 }
+.faq{
+  background: linear-gradient(124deg, #D1EEFF 0%, #FFF 55%);
+}
 .card-bg {
   background: radial-gradient(
     50% 50% at 50% 50%,

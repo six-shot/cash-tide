@@ -5,12 +5,13 @@ import right from "../../public/svgs/right.svg";
 import widget1 from "../../public/svgs/widget1.svg";
 import widget from "../../public/svgs/widget.svg";
 import benefits from "../../public/svgs/benefits.svg";
-import { motion } from "framer-motion";
 import dollar from "../../public/svgs/dollar.svg";
 import speed from "../../public/svgs/speed.svg";
 import star from "../../public/svgs/star.svg";
 import Marquee from "react-fast-marquee";
 import MarqueePage from "@/components/Marquee";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const benefitsData = [
   {
@@ -51,6 +52,9 @@ const benefitsData = [
   },
 ];
 
+
+
+
 const marqueeFeatures = [
   "Smart Payment Requests",
   "Instant Global Transfers",
@@ -60,6 +64,42 @@ const marqueeFeatures = [
 ];
 
 export default function Home() {
+
+
+
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
+  const [clickedCard, setClickedCard] = useState<number | null>(0);
+  const data = [
+    {
+      title: "What is Whisper?",
+      answer:
+        "Whisper is a decentralized, wallet-based messaging app built for Web3. It offers end-to-end encrypted chat, in-chat crypto transfers, and AI-powered insights — all without usernames, emails, or centralized servers.",
+    },
+    {
+      title: "How is Whisper different from other messaging apps?",
+      answer:
+        "Unlike traditional messengers, Whisper uses your Ethereum wallet as your identity, supports on-chain actions like sending ETH, and ensures total privacy with decentralized protocols like XMTP.",
+    },
+    {
+      title: "Can I use Whisper on multiple devices?",
+      answer:
+        "Yes. Whisper supports secure multi-device syncing, so you can continue conversations seamlessly across mobile and desktop.",
+    },
+    {
+      title: "How does Whisper protect my privacy?",
+      answer:
+        "Messages are end-to-end encrypted and stored off-chain. Your identity stays anonymous, with no metadata exposure or centralized storage — ensuring full control and privacy.",
+    },
+    {
+      title: "What can Whisper's AI Assistant do??",
+      answer:
+        "Whisper's AI gives you live gas estimates, token trends, wallet stats, and answers to basic blockchain questions — all within the chat experience.",
+    },
+  ];
+
+
+
+
   return (
     <div>
       <div className="pt-[92px] relative h-[902px]  overflow-hidden ">
@@ -258,7 +298,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="why ">
+      <div className="faq ">
         <div className="max-w-[1440px] mx-auto py-[96px] px-[100px] flex items-center">
           <div className="flex flex-col gap-4  items-start w-[570px] flex-1">
             <div className="flex gap-2 items-center">
@@ -342,6 +382,136 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="faq ">
+        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
+          <div className="flex justify-center items-center flex-col gap-4">
+            <div className="flex gap-2 items-center">
+              <Image src={benefits} alt="benefits" />
+              <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
+                FAQ'S
+              </h5>
+            </div>
+            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+              Got a quick question?
+            </h5>
+            <p className="font-[family-name:var(--font-inter)] text-[#13181f]  text-center">
+              We're here to help you make the right decision. Explore our
+              frequently asked <br /> questions and find answers below.
+            </p>
+          </div>
+          <div className="mt-[44px] flex justify-center  ">
+            <div className="  flex flex-col p-[36px] w-[900px] gap-4 card-bg shadow-[0px_-22px_37px_0px_#1d1f130d] rounded-[20px]">
+              {data.map((item, index) => (
+                <Accordion
+                  key={index}
+                  index={index}
+                  title={item.title}
+                  answer={item.answer}
+                  hoveredIndex={hoveredIndex}
+                  setHoveredIndex={setHoveredIndex}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+const Accordion = ({
+  title,
+  answer,
+  index,
+  hoveredIndex,
+  setHoveredIndex,
+}: {
+  title: string;
+  answer: string;
+  index: number;
+  hoveredIndex: number | null;
+  setHoveredIndex: (index: number | null) => void;
+}) => {
+  const isOpen = hoveredIndex === index;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: false }}
+      onClick={() => setHoveredIndex(isOpen ? null : index)}
+      className="relative p-[1px] overflow-hidden cursor-pointer"
+    >
+      <div className="stroke-rectangle absolute inset-0"></div>
+      {isOpen && <div className="stroke-rectangle is-gradient"></div>}
+      <div className=" card-bg border border-[#EAF0DD] rounded-[12px] font-[family-name:var(--font-inter)] py-[30px]">
+        <motion.button
+          className="flex justify-between items-center w-full px-[30px] "
+          whileHover={{ scale: 1.01 }}
+          transition={{ duration: 0.2 }}
+        >
+          <span className="text-[16px] text-[#13181F] font-medium">
+            {title}
+          </span>
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 27 27"
+            fill="none"
+            animate={isOpen ? { rotate: 45 } : { rotate: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <g clipPath="url(#clip0_1_556)">
+              <path
+                d="M13.2018 25.1331C12.7266 25.1331 12.2709 24.9444 11.9349 24.6084C11.5989 24.2724 11.4102 23.8166 11.4102 23.3415V1.84147C11.4102 1.36629 11.5989 0.910575 11.9349 0.574572C12.2709 0.23857 12.7266 0.0498047 13.2018 0.0498047C13.677 0.0498047 14.1327 0.23857 14.4687 0.574572C14.8047 0.910575 14.9935 1.36629 14.9935 1.84147V23.3415C14.9935 23.8166 14.8047 24.2724 14.4687 24.6084C14.1327 24.9444 13.677 25.1331 13.2018 25.1331Z"
+                fill="#13181F"
+              />
+              <path
+                d="M2.45182 14.3831C1.97664 14.3831 1.52093 14.1944 1.18492 13.8584C0.848921 13.5224 0.660156 13.0666 0.660156 12.5915C0.660156 12.1163 0.848921 11.6606 1.18492 11.3246C1.52093 10.9886 1.97664 10.7998 2.45182 10.7998H23.9518C24.427 10.7998 24.8827 10.9886 25.2187 11.3246C25.5547 11.6606 25.7435 12.1163 25.7435 12.5915C25.7435 13.0666 25.5547 13.5224 25.2187 13.8584C24.8827 14.1944 24.427 14.3831 23.9518 14.3831H2.45182Z"
+                fill="#13181F"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_556">
+                <rect
+                  width="24"
+                  height="24"
+                  fill="#13181F"
+                  transform="translate(0.5 0.0498047)"
+                />
+              </clipPath>
+            </defs>
+          </motion.svg>
+        </motion.button>
+
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className=" text-[1rem] text-[#13181F] mt-[21px] px-[30px] ">
+                {answer}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  );
+};

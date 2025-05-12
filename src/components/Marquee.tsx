@@ -5,7 +5,7 @@ const MarqueePage = () => {
   const cardContent = (
     <>
       <div className="px-[36px] w-[500px] flex items-center h-[110px] card-bg rounded-[16px] border border-[#EAF0DD] font-[family-name:var(--font-inter)]">
-        <div className="flex justify-between items-center w-full">
+        <div className="flex justify-between items-center w-full pl-[38px]">
           <h5 className="text-[#13181F]  text-[16px]">
             Send money with just a phone number.
           </h5>
