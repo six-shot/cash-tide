@@ -275,8 +275,8 @@ export default function Home() {
               any recipient using their phone number. No fees, no delays, no
               banks.
             </p>
-            <button className="ml-2 cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
-              Enter Dapp
+            <button className=" cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
+            Get Started
             </button>
           </div>
           <div className="flex-1 pl-[100px]">
@@ -309,9 +309,38 @@ export default function Home() {
               receiving money fast, free, and accessible — even without a bank
               account.
             </p>
-            <button className="ml-2 cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
+            <button className=" cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
               Enter Dapp
             </button>
+          </div>
+        </div>
+      </div>
+      <div className="why ">
+        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px] flex items-center">
+          <div className="flex flex-col gap-4  items-start w-[570px] flex-1">
+            <div className="flex gap-2 items-center">
+              <Image src={benefits} alt="benefits" />
+              <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
+                Key Takeaway
+              </h5>
+            </div>
+            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+              Financial freedom as simple as sending a text.
+            </h5>
+            <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
+              Access global money transfers without the complexity of
+              traditional banking—just a phone number connects you to instant,
+              secure.
+            </p>
+            <button className=" cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
+              Enter Dapp
+            </button>
+          </div>
+          <div className="flex-1 pl-[100px]">
+            {/* <video className="rounded-[20px] w-full" autoPlay>
+              <source src="/video/video1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> */}
           </div>
         </div>
       </div>
