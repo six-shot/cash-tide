@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           <div className="mt-6 h-[76px] card-bg">
             <p className="text-[#13181F] text-sm font-medium font-[family-name:var(--font-inter)]">
-              @2025 Whisper. All rights reserved.
+              @2025 CashTide. All rights reserved.
             </p>
           </div>
         </div>

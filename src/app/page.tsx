@@ -65,29 +65,29 @@ export default function Home() {
  
   const data = [
     {
-      title: "What is Whisper?",
+      title: "How do I send money with Cash Tide?",
       answer:
-        "Whisper is a decentralized, wallet-based messaging app built for Web3. It offers end-to-end encrypted chat, in-chat crypto transfers, and AI-powered insights — all without usernames, emails, or centralized servers.",
+        "Simply enter the recipient’s phone number, specify the amount, and hit send. No banking details are needed!",
     },
     {
-      title: "How is Whisper different from other messaging apps?",
+      title: "Can I use Cash Tide internationally?",
       answer:
-        "Unlike traditional messengers, Whisper uses your Ethereum wallet as your identity, supports on-chain actions like sending ETH, and ensures total privacy with decentralized protocols like XMTP.",
+        "Absolutely! You can send money anywhere in the world, instantly and without hassle.",
     },
     {
-      title: "Can I use Whisper on multiple devices?",
+      title: "How does Cash Tide ensure security?",
       answer:
-        "Yes. Whisper supports secure multi-device syncing, so you can continue conversations seamlessly across mobile and desktop.",
+        "Cash Tide uses blockchain technology to ensure that all transactions are secure, transparent, and efficient.",
     },
     {
-      title: "How does Whisper protect my privacy?",
+      title: "Are there any fees for sending money?",
       answer:
-        "Messages are end-to-end encrypted and stored off-chain. Your identity stays anonymous, with no metadata exposure or centralized storage — ensuring full control and privacy.",
+        "No! All transfers are completely free—there are no hidden costs or service charges.",
     },
     {
-      title: "What can Whisper's AI Assistant do??",
+      title: "Is there a limit to how much I can send?",
       answer:
-        "Whisper's AI gives you live gas estimates, token trends, wallet stats, and answers to basic blockchain questions — all within the chat experience.",
+        "There are no strict limits on transfers, though certain regions may have transaction thresholds. Please check our terms for more details.",
     },
   ];
 
