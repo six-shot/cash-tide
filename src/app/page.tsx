@@ -103,7 +103,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="pt-[92px] relative h-[702px]  overflow-hidden ">
+      <div className="md:pt-[92px] pt-[50px] relative h-[702px]  overflow-hidden ">
         <Image
           src={left}
           alt="left"
@@ -115,22 +115,23 @@ export default function Home() {
           className="absolute -bottom-[50px] right-0 opacity-10"
         />
         <div className="max-w-[1440px] mx-auto  h-[702px] relative">
-          <div className="pt-[68px] flex gap-6 flex-col justify-center items-center">
+          <div className="pt-[68px] flex gap-6 flex-col justify-center items-center md:px-0 px-5">
             <div className="px-[35px] bg-[#D1EEFF] rounded-[18px] flex items-center">
               <h6 className="text-[#13181F] h-[31px] flex items-center text-[13px] font-medium font-[family-name:var(--font-suisee)] mt-[3px]">
                 Powering Global Payments
               </h6>
             </div>
             <div>
-              <h2 className="text-[#061833] text-[72px] tracking-[-0.01em] font-bold font-[family-name:var(--font-TWKLausanne500)] text-center leading-[79px] mt-[23px]">
-                Transfers as Simple as a <br /> Text Message.
+              <h2 className="text-[#061833] md:text-[72px] text-[40px] tracking-[-0.01em] font-bold font-[family-name:var(--font-TWKLausanne500)] text-center md:leading-[79px] leading-[44px] md:mt-[23px]">
+                Transfers as Simple as a <br className="md:flex hidden" /> Text
+                Message.
               </h2>
-              <p className="mt-[17px] w-[640px] text-[#475467] leading-[23px] text-center font-[family-name:var(--font-inter)]">
+              <p className="mt-[17px] md:w-[640px] text-[#475467] leading-[23px] text-center font-[family-name:var(--font-inter)]">
                 No App needed. Send and receive globally, instantly, and for
                 free. With just a phone number, your wallet is ready.
               </p>
             </div>
-            <button className="ml-2 cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
+            <button className=" md:mt-0 mt-[21px] cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
               Enter Dapp
             </button>
           </div>
@@ -164,23 +165,23 @@ export default function Home() {
         </div>
       </div>
       <div className="why ">
-        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
-          <div className="flex flex-col gap-4">
+        <div className="max-w-[1440px] mx-auto md:py-[96px] py-20 md:px-[100] px-5">
+          <div className="flex md:justify-start justify-center flex-col gap-4 md:items-start items-center">
             <div className="flex gap-2 items-center">
               <Image src={benefits} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 BENEFITS
               </h5>
             </div>
-            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+            <h5 className="md:text-[44px]  text-[28px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
               Why Choose Cashtide?
             </h5>
-            <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
+            <p className="font-[family-name:var(--font-inter)] text-[15px] md:text-[16px] text-[#13181f] md:text-left text-center">
               Global transfers, redefined - Instant, Borderless, and Effortless.
               Just a phone <br /> number is all it takes.
             </p>
           </div>
-          <div className="mt-[44px] grid grid-cols-3 gap-8 ">
+          <div className="mt-[44px] grid md:grid-cols-3 grid-cols-1 gap-8 ">
             {benefitsData.map((benefit, index) => (
               <div
                 key={index}
@@ -193,10 +194,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 flex flex-col gap-4">
-                  <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
+                  <h5 className="text-[#13181F] md:text-[23px] text-[20px] font-[family-name:var(--font-inter)] font-medium">
                     {benefit.title}
                   </h5>
-                  <h5 className="text-[#13181F] text-[14px] font-[family-name:var(--font-inter)]">
+                  <h5 className="text-[#13181F] md:text-[14px] text-[13px] font-[family-name:var(--font-inter)]">
                     {benefit.description}
                   </h5>
                 </div>
@@ -206,63 +207,63 @@ export default function Home() {
         </div>
       </div>
       <div className="faq ">
-        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
-          <div className="flex flex-col gap-4">
+        <div className="max-w-[1440px] mx-auto md:md:py-[96px] py-20  md:px-[100] px-5">
+          <div className="flex md:justify-start justify-center flex-col gap-4 md:items-start items-center">
             <div className="flex gap-2 items-center">
               <Image src={get} alt="get" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 THE CASHTIDE ADVANTAGES
               </h5>
             </div>
-            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+            <h5 className="md:text-[44px] text-[28px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
               Get more with Cashtide
             </h5>
-            <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
+            <p className="font-[family-name:var(--font-inter)] text-[15px] md:text-[16px] text-[#13181f] md:text-left text-center">
               Leverage the power of AI to automatically optimize your purchases,
-              ensuring you <br /> get the best value for your business with
+              ensuring you <br className="md:flex hiddem" /> get the best value for your business with
               every transaction.
             </p>
           </div>
-          <div className="my-[44px] flex card-bg border border-[#EAECF1] p-[36px] rounded-[15px]">
-            <div className="pr-6">
+          <div className="my-[44px] flex md:flex-row flex-col card-bg border  border-[#EAECF1] md:p-[36px] p-[30px] rounded-[15px]">
+            <div className="md:pr-6 md:pb-0 pb-6">
               <div className="w-[53px] h-[53px] bg-black flex justify-center items-center rounded-full">
                 <Image src={star} alt="star" />
               </div>
               <div className="mt-6">
-                <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
-                  Send and receive money at Zero Cost
+                <h5 className="text-[#13181F] md:text-[23px] text-[20px] font-[family-name:var(--font-inter)] font-medium md:leading-[31px] leading-[26px]">
+                  Send and receive <br className="md:flex hidden"/> money at Zero Cost
                 </h5>
-                <h5 className="text-[#13181F] text-[14px] font-[family-name:var(--font-inter)]">
+                <h5 className="text-[#13181F] md:text-[14px] text-[13px] font-[family-name:var(--font-inter)] md:mt-5 mt-4">
                   Send and receive money globally with no fees or hidden
                   charges. CashTide makes cross-border transfers fast and
                   affordable.
                 </h5>
               </div>
             </div>
-            <div className="px-6 border-l border-[#EAF0DD]">
+            <div className="md:px-6 px-0 md:border-l md:border-t-0 border-t md:py-0 py-6 border-[#EAF0DD]">
               <div className="w-[53px] h-[53px] bg-black flex justify-center items-center rounded-full">
                 <Image src={phone} alt="star" />
               </div>
               <div className="mt-6">
-                <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
-                  Send to Any Phone Number
+                <h5 className="text-[#13181F] md:text-[23px] text-[20px] font-[family-name:var(--font-inter)] font-medium md:leading-[31px] leading-[26px]">
+                  Send to Any Phone <br className="md:flex hidden" /> Number
                 </h5>
-                <h5 className="text-[#13181F] text-[14px] font-[family-name:var(--font-inter)]">
+                <h5 className="text-[#13181F] md:text-[14px] text-[13px] font-[family-name:var(--font-inter)] md:mt-5 mt-4">
                   Send money to any phone number, even without the app. Once the
                   recipient installs CashTide, they can instantly access their
                   funds.
                 </h5>
               </div>
             </div>
-            <div className="pl-6 border-l border-[#EAF0DD]">
+            <div className="md:pl-6 pl-0 md:border-l md:border-t-0 border-t md:pt-0 pt-6  border-[#EAF0DD]">
               <div className="w-[53px] h-[53px] bg-black flex justify-center items-center rounded-full">
                 <Image src={request} alt="star" />
               </div>
               <div className="mt-6">
-                <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
-                  Request and Approve Payments with Ease
+                <h5 className="text-[#13181F] md:text-[23px] text-[20px] font-[family-name:var(--font-inter)] font-medium md:leading-[31px] leading-[26px]">
+                  Request and Approve <br className="md:flex hidden" /> Payments with Ease
                 </h5>
-                <h5 className="text-[#13181F] text-[14px] font-[family-name:var(--font-inter)]">
+                <h5 className="text-[#13181F] md:text-[14px] text-[13px] font-[family-name:var(--font-inter)] md:mt-5 mt-4">
                   Easily request payments and let the recipient approve or
                   decline. CashTide streamlines payment management with a simple
                   tap.
@@ -305,15 +306,15 @@ export default function Home() {
         </div>
       </div>
       <div className="faq ">
-        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px] flex items-center">
-          <div className="flex flex-col gap-4  items-start w-[570px] flex-1">
+        <div className="max-w-[1440px] mx-auto md:md:py-[96px] py-20  md:px-[100] md:gap-0 gap-8 px-5 flex md:flex-row flex-col items-center">
+          <div className="flex flex-col gap-4  items-start md:w-[570px] flex-1">
             <div className="flex gap-2 items-center">
               <Image src={product} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 Product
               </h5>
             </div>
-            <h5 className="text-[44px] leading-[52px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
+            <h5 className="md:text-[44px] text-[28px] md:leading-[52px] leading-[33px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
               Send money instantly and for free
             </h5>
             <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
@@ -326,28 +327,28 @@ export default function Home() {
               Get Started
             </button>
           </div>
-          <div className="flex-1 pl-[100px]">
+          <div className="flex-1 md:pl-[100px]">
             <video className="rounded-[20px] w-full" autoPlay loop muted>
               <source src="/video/video1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
-        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px] flex items-center pt-[100px]">
-          <div className="flex-1 mr-[100px]">
+        <div className="max-w-[1440px] mx-auto md:md:py-[96px] py-20  md:px-[100] px-5 flex md:flex-row md:gap-0 gap-8 flex-col items-center pt-[100px]">
+          <div className="flex-1 md:mr-[100px]">
             <video className="rounded-[20px] w-full" autoPlay loop muted>
               <source src="/video/video2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className="flex flex-col gap-4  items-start w-[570px] flex-1">
+          <div className="flex flex-col gap-4  items-start md:w-[570px] flex-1">
             <div className="flex gap-2 items-center">
               <Image src={product} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 Product
               </h5>
             </div>
-            <h5 className="text-[44px] leading-[52px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
+            <h5 className="md:text-[44px] text-[28px] md:leading-[52px] leading-[33px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
               Receive Money from Any Corner of the Globe
             </h5>
             <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
@@ -363,18 +364,18 @@ export default function Home() {
         </div>
       </div>
       <div className="why ">
-        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px] flex items-center">
-          <div className="flex flex-col gap-4  items-start w-[570px] flex-1">
+        <div className="max-w-[1440px] mx-auto md:md:py-[96px] md:flex-row flex-col py-20  md:px-[100]  md:gap-0 gap-[44px] px-5 flex items-center">
+          <div className="flex flex-col gap-4 md:justify-start justify-center md:items-start items-center md:w-[570px] flex-1">
             <div className="flex gap-2 items-center">
               <Image src={benefits} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 Key Takeaway
               </h5>
             </div>
-            <h5 className="text-[44px] leading-[52px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
+            <h5 className="md:text-[44px] text-[28px] md:leading-[52px] leading-[33px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f] md:text-left text-center">
               Financial freedom as simple as sending a text.
             </h5>
-            <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
+            <p className="font-[family-name:var(--font-inter)] text-[#13181f] md:text-base text-[15px] md:text-left text-center">
               Access global money transfers without the complexity of
               traditional banking—just a phone number connects you to instant,
               secure.
@@ -383,30 +384,30 @@ export default function Home() {
               Enter Dapp
             </button>
           </div>
-          <div className="flex-1 pl-[100px] h-[500px] overflow-hidden">
+          <div className="flex-1 w-full md:pl-[100px] h-[500px] overflow-hidden">
             <MarqueePage />
           </div>
         </div>
       </div>
       <div className="faq ">
-        <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
-          <div className="flex justify-center items-center flex-col gap-4">
+        <div className="max-w-[1440px] mx-auto md:md:py-[96px] py-20  md:px-[100] px-5">
+          <div className="flex  justify-center  items-center flex-col gap-4">
             <div className="flex gap-2 items-center">
               <Image src={faq} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 FAQ&apos;S
               </h5>
             </div>
-            <h5 className="text-[44px] leading-[52px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
+            <h5 className="md:text-[44px] text-[28px] md:leading-[52px] leading-[33px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f] text-center">
               Got a quick question?
             </h5>
-            <p className="font-[family-name:var(--font-inter)] text-[#13181f]  text-center">
+            <p className="font-[family-name:var(--font-inter)] text-[#13181f]  t md:text-base text-[15px] text-center">
               We&apos;re here to help you make the right decision. Explore our
               frequently asked <br /> questions and find answers below.
             </p>
           </div>
           <div className="mt-[44px] flex justify-center relative ">
-            <div className="  flex flex-col p-[36px] w-[900px] gap-4 card-bg shadow-[0px_-22px_37px_0px_#1d1f130d] rounded-[20px] z-[20]">
+            <div className="  flex flex-col md:p-[36px] p-6 w-[900px] gap-4 card-bg shadow-[0px_-22px_37px_0px_#1d1f130d] rounded-[20px] z-[20]">
               {data.map((item, index) => (
                 <Accordion
                   key={index}
@@ -422,14 +423,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="cta py-20">
+      <div className="cta py-20 md:px-0 px-5">
         <div className="flex gap-4 flex-col justify-center items-center">
-          <h2 className="text-[#061833] text-[44px] tracking-[-0.01em] font-medium font-[family-name:var(--font-TWKLausanne500)] text-center leading-[79px] mt-[23px]">
+          <h2 className="text-[#061833] md:text-[44px] text-[28px] tracking-[-0.01em] font-medium font-[family-name:var(--font-TWKLausanne500)] text-center md:leading-[79px] leading-[32px] mt-[23px]">
             🚀 Ready to Send Money Like a Text?
           </h2>
-          <p className=" w-[640px] text-[#475467] leading-[23px] text-center font-[family-name:var(--font-inter)]">
+          <p className=" md:w-[640px] w-full text-[#475467] leading-[23px] text-center font-[family-name:var(--font-inter)]">
             Join thousands who are already sending and receiving money globally
-            in <br /> seconds—free, fast, and secure.
+            in <br className="md:flex hidden" /> seconds—free, fast, and secure.
           </p>
           <button className=" cursor-pointer bg-[#1C77FF] shadow-[0px_2px_5px_0px_rgba(0,0,0,0.25)] text-white px-4 h-[44px] rounded-[9px] font-medium font-[family-name:var(--font-inter)]">
             Get Started
@@ -472,7 +473,7 @@ const Accordion = ({
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.2 }}
         >
-          <span className="text-[16px] text-[#13181F] font-medium">
+          <span className="text-[16px] text-[#13181F] text-left font-medium">
             {title}
           </span>
           <motion.svg
