@@ -14,6 +14,10 @@ const lausanne = localFont({
   src: "../../public/fonts/Lausanne.ttf",
   variable: "--font-lausanne",
 });
+const TWKLausanne400 = localFont({
+  src: "../../public/fonts/twk/TWKLausanne-400.woff",
+  variable: "--font-TWKLausanne400",
+});
 const TWKLausanne700 = localFont({
   src: "../../public/fonts/twk/TWKLausanne-700.woff",
   variable: "--font-TWKLausanne700",
@@ -42,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${inter.variable} ${suisee.variable} ${lausanne.variable} ${TWKLausanne700.variable} ${TWKLausanne500.variable} antialiased`}
+        className={` ${inter.variable} ${suisee.variable} ${lausanne.variable} ${TWKLausanne400.variable} ${TWKLausanne700.variable} ${TWKLausanne500.variable} antialiased`}
       ><Navbar/>
         {children}
         <Footer />

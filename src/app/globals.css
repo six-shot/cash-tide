@@ -25,7 +25,14 @@ body {
     #fff 100%
   );
 }
-
+.cta{
+  background: linear-gradient(270deg, #FFF 0%, #D1F0FF 48.65%, #FFF 100%);
+}
+.faq-blur{
+  background: radial-gradient(50% 50% at 50% 50%, #D1EDFF 0%, rgba(255, 255, 255, 0.00) 100%);
+  width: 700px;
+  height: 487px;
+}
 
 .gallery {
   position: relative;

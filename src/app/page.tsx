@@ -8,6 +8,15 @@ import benefits from "../../public/svgs/benefits.svg";
 import dollar from "../../public/svgs/dollar.svg";
 import speed from "../../public/svgs/speed.svg";
 import star from "../../public/svgs/star.svg";
+import instantTransaction from "../../public/svgs/instant-transaction.svg";
+import phone from "../../public/svgs/phone.svg";
+import request from "../../public/svgs/request.svg";
+import bank from "../../public/svgs/bank.svg";
+import zero from "../../public/svgs/zero.svg";
+import selfCustody from "../../public/svgs/self-custody.svg";
+import blockchain from "../../public/svgs/blockchain.svg";
+import product from "../../public/svgs/product.svg";
+import faq from "../../public/svgs/faq.svg";
 import Marquee from "react-fast-marquee";
 import MarqueePage from "@/components/Marquee";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,31 +33,31 @@ const benefitsData = [
     title: "Instant Transactions",
     description:
       "Your money moves at the speed of a text message. Send funds globally and have them arrive within seconds, not days.",
-    icons: [dollar, speed],
+    icons: [instantTransaction, speed],
   },
   {
     title: "Blockchain-Powered",
     description:
       "Your transactions are secured on the blockchain - fast, transparent, and tamper-proof from end to end.",
-    icons: [dollar, speed],
+    icons: [blockchain, speed],
   },
   {
-    title: "Global Access",
+    title: "No Bank Details Needed",
     description:
-      "Use your phone number anywhere in the world. One wallet, global access - No borders & No banking apps.",
-    icons: [dollar, speed],
+      "Skip the hassle of IBANs or SWIFT codes. All you need is a phone number to send or receive funds",
+    icons: [bank, speed],
   },
   {
-    title: "Instant Transfers",
+    title: "Zero paperwork",
     description:
-      "Send and receive money instantly across borders with just a phone number.",
-    icons: [dollar, speed],
+      "No forms or delays. Get funds instantly via your phone—no complex steps or verification hassles",
+    icons: [zero, speed],
   },
   {
-    title: "Zero Fees",
+    title: "Self-Custody Wallet",
     description:
-      "Enjoy completely free transfers with no hidden charges or transaction fees.",
-    icons: [dollar, speed],
+      "Stay in full control. Your money is stored in a wallet tied to your phone. No third parties, no restrictions.",
+    icons: [selfCustody, speed],
   },
 ];
 
@@ -62,12 +71,12 @@ const marqueeFeatures = [
 
 export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(0);
- 
+
   const data = [
     {
       title: "How do I send money with Cash Tide?",
       answer:
-        "Simply enter the recipient’s phone number, specify the amount, and hit send. No banking details are needed!",
+        "Simply enter the recipient's phone number, specify the amount, and hit send. No banking details are needed!",
     },
     {
       title: "Can I use Cash Tide internationally?",
@@ -172,9 +181,9 @@ export default function Home() {
                 className="p-[36px] rounded-[14px] card-bg border border-[#EAF0DD]"
               >
                 <div className="flex justify-between items-center">
-                  <Image src={dollar} alt="dollar" />
+                  <Image src={benefit.icons[0]} alt="benefit-icon-1" />
                   <div className="w-[36px] h-[36px] bg-[#F7F8F5] rounded-full flex items-center justify-center -mt-10 -mr-4">
-                    <Image src={speed} alt="speed" />
+                    <Image src={benefit.icons[1]} alt="benefit-icon-2" />
                   </div>
                 </div>
                 <div className="mt-6 flex flex-col gap-4">
@@ -190,7 +199,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="why ">
+      <div className="faq ">
         <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
           <div className="flex flex-col gap-4">
             <div className="flex gap-2 items-center">
@@ -226,7 +235,7 @@ export default function Home() {
             </div>
             <div className="px-6 border-l border-[#EAF0DD]">
               <div className="w-[53px] h-[53px] bg-black flex justify-center items-center rounded-full">
-                <Image src={star} alt="star" />
+                <Image src={phone} alt="star" />
               </div>
               <div className="mt-6">
                 <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
@@ -241,7 +250,7 @@ export default function Home() {
             </div>
             <div className="pl-6 border-l border-[#EAF0DD]">
               <div className="w-[53px] h-[53px] bg-black flex justify-center items-center rounded-full">
-                <Image src={star} alt="star" />
+                <Image src={request} alt="star" />
               </div>
               <div className="mt-6">
                 <h5 className="text-[#13181F] text-[23px] font-[family-name:var(--font-inter)] font-medium">
@@ -293,12 +302,12 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto py-[96px] px-[100px] flex items-center">
           <div className="flex flex-col gap-4  items-start w-[570px] flex-1">
             <div className="flex gap-2 items-center">
-              <Image src={benefits} alt="benefits" />
+              <Image src={product} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 Product
               </h5>
             </div>
-            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+            <h5 className="text-[44px] leading-[52px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
               Send money instantly and for free
             </h5>
             <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
@@ -312,7 +321,7 @@ export default function Home() {
             </button>
           </div>
           <div className="flex-1 pl-[100px]">
-            <video className="rounded-[20px] w-full" autoPlay loop>
+            <video className="rounded-[20px] w-full" autoPlay loop muted>
               <source src="/video/video1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -320,19 +329,19 @@ export default function Home() {
         </div>
         <div className="max-w-[1440px] mx-auto py-[96px] px-[100px] flex items-center pt-[100px]">
           <div className="flex-1 mr-[100px]">
-            <video className="rounded-[20px] w-full" autoPlay loop>
+            <video className="rounded-[20px] w-full" autoPlay loop muted>
               <source src="/video/video2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <div className="flex flex-col gap-4  items-start w-[570px] flex-1">
             <div className="flex gap-2 items-center">
-              <Image src={benefits} alt="benefits" />
+              <Image src={product} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 Product
               </h5>
             </div>
-            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+            <h5 className="text-[44px] leading-[52px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
               Receive Money from Any Corner of the Globe
             </h5>
             <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
@@ -356,7 +365,7 @@ export default function Home() {
                 Key Takeaway
               </h5>
             </div>
-            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+            <h5 className="text-[44px] leading-[52px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
               Financial freedom as simple as sending a text.
             </h5>
             <p className="font-[family-name:var(--font-inter)] text-[#13181f]">
@@ -377,12 +386,12 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
           <div className="flex justify-center items-center flex-col gap-4">
             <div className="flex gap-2 items-center">
-              <Image src={benefits} alt="benefits" />
+              <Image src={faq} alt="benefits" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 FAQ&apos;S
               </h5>
             </div>
-            <h5 className="text-[44px] font-[family-name:var(--font-TWKLausanne500)] text-[#13181f]">
+            <h5 className="text-[44px] leading-[52px] font-[family-name:var(--font-TWKLausanne400)] text-[#13181f]">
               Got a quick question?
             </h5>
             <p className="font-[family-name:var(--font-inter)] text-[#13181f]  text-center">
@@ -406,7 +415,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="why py-20">
+      <div className="cta py-20">
         <div className="flex gap-4 flex-col justify-center items-center">
           <h2 className="text-[#061833] text-[44px] tracking-[-0.01em] font-medium font-[family-name:var(--font-TWKLausanne500)] text-center leading-[79px] mt-[23px]">
             🚀 Ready to Send Money Like a Text?
