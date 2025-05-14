@@ -399,8 +399,8 @@ export default function Home() {
               frequently asked <br /> questions and find answers below.
             </p>
           </div>
-          <div className="mt-[44px] flex justify-center  ">
-            <div className="  flex flex-col p-[36px] w-[900px] gap-4 card-bg shadow-[0px_-22px_37px_0px_#1d1f130d] rounded-[20px]">
+          <div className="mt-[44px] flex justify-center relative ">
+            <div className="  flex flex-col p-[36px] w-[900px] gap-4 card-bg shadow-[0px_-22px_37px_0px_#1d1f130d] rounded-[20px] z-[20]">
               {data.map((item, index) => (
                 <Accordion
                   key={index}
@@ -412,6 +412,7 @@ export default function Home() {
                 />
               ))}
             </div>
+            <div className="faq-blur absolute top-[-10px] right-[-200px] z-[10]" />
           </div>
         </div>
       </div>

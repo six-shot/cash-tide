@@ -11,11 +11,15 @@ body {
 .why {
   background: linear-gradient(241deg, #d1f0ff 0%, #fff 55%);
 }
-.faq{
-  background: linear-gradient(124deg, #D1EEFF 0%, #FFF 55%);
+.faq {
+  background: linear-gradient(124deg, #d1eeff 0%, #fff 55%);
 }
-.nav-bg{
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.4) 0%, var(--token-d49ce14e-f5dc-463a-9b8d-4f0e772df7f1, rgb(255, 255, 255)) 100%);
+.nav-bg {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0.4) 0%,
+    var(--token-d49ce14e-f5dc-463a-9b8d-4f0e772df7f1, rgb(255, 255, 255)) 100%
+  );
   backdrop-filter: blur(5px);
 }
 .card-bg {
@@ -25,13 +29,18 @@ body {
     #fff 100%
   );
 }
-.cta{
-  background: linear-gradient(270deg, #FFF 0%, #D1F0FF 48.65%, #FFF 100%);
+.cta {
+  background: linear-gradient(270deg, #fff 0%, #d1f0ff 48.65%, #fff 100%);
 }
-.faq-blur{
-  background: radial-gradient(50% 50% at 50% 50%, #D1EDFF 0%, rgba(255, 255, 255, 0.00) 100%);
+.faq-blur {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #d1edff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   width: 700px;
   height: 487px;
+  
 }
 
 .gallery {
@@ -73,4 +82,3 @@ body {
 .animate-marquee-top {
   animation: marqueeTop 10s linear infinite;
 }
-
