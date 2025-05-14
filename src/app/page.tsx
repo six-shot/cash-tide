@@ -21,7 +21,8 @@ import Marquee from "react-fast-marquee";
 import MarqueePage from "@/components/Marquee";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-
+import caret from "../../public/svgs/caret.svg";
+import get from "../../public/svgs/get.svg";
 const benefitsData = [
   {
     title: "Global Access",
@@ -133,6 +134,11 @@ export default function Home() {
               Enter Dapp
             </button>
           </div>
+          <div className="mt-[44px] flex justify-center">
+            <div className="w-[35px] h-[35px] rounded-full flex justify-center items-center bg-[#DDE9F0]">
+              <Image src={caret} alt="caret" />
+            </div>
+          </div>
           <motion.div
             className="absolute bottom-[300px] right-[-34px] hu"
             animate={{ y: [0, -15, 0] }}
@@ -203,7 +209,7 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto py-[96px] px-[100px]">
           <div className="flex flex-col gap-4">
             <div className="flex gap-2 items-center">
-              <Image src={benefits} alt="benefits" />
+              <Image src={get} alt="get" />
               <h5 className="text-[14px] text-[#13181f] font-medium font-[family-name:var(--font-inter)]">
                 THE CASHTIDE ADVANTAGES
               </h5>
