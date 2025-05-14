@@ -102,7 +102,7 @@ export default function Home() {
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div className="md:pt-[92px] pt-[50px] relative h-[702px]  overflow-hidden ">
         <Image
           src={left}

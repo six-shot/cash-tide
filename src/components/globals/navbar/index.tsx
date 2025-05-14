@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <div className="fixed top-5 left-0 right-0 z-50">
       <div className="w-full flex justify-center items-center">
-        <div className="w-[1100px] nav-bg md:h-[72px] h-[64px]  pl-5 pr-3 md:pl-[38px] md:pr-[38px] border border-[#EAECF0] rounded-[40px] flex justify-between items-center">
+        <div className="max-w-[1100px] w-full mx-5 nav-bg md:h-[72px] h-[64px] px-5 md:px-[38px] border border-[#EAECF0] rounded-[40px] flex justify-between items-center">
           <Image src={logo} alt="logo" width={107} height={33} />
           <nav className="md:flex hidden items-center gap-[39px] text-sm font-medium font-[family-name:var(--font-inter)] text-[#13181F]">
             <Link href="/">Home</Link>
